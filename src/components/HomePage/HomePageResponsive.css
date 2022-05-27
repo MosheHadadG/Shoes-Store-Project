@@ -1,0 +1,21 @@
+@media(max-width: 1445px) {
+  .shoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 1280px) {
+  .main{
+    display: flex;
+    justify-content: center;
+  }
+  .shoes {
+    width: 100%;
+  } 
+.createShoes-container {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse; */
+  display: none;
+}
+}

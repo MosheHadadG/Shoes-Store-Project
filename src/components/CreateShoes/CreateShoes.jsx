@@ -16,6 +16,8 @@ class CreateShoes extends Component {
     this.setState({ [actionName]: value });
   }
 
+  //! Create 
+  
   createdShoe = async (newShoe) => {
     await createShoe(newShoe)
   }

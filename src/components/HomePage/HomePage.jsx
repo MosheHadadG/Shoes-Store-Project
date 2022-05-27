@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 import DeleteShoes from "../DeleteShoes/DeleteShoes";
 import CreateShoes from "../CreateShoes/CreateShoes";
-import './HomePage.css'
+import Spinner from "../Spinner/Spinner";
 import { deleteShoe } from '../Apis/requests'
-class HomePage extends Component {
 
+import './HomePage.css'
+import './HomePageResponsive.css'
+
+
+
+
+
+class HomePage extends Component {
 
   //! Delete
   deleteShoe = async (id) => {
@@ -50,13 +58,16 @@ class HomePage extends Component {
   }
 
   render() {
+    const { Spinning } = this.props
     return (
       <div className="main">
-        <div className="shoes">
-          {this.renderdShoes()}
-        </div>
+        {Spinning ? (<Spinner />) : (
+          <div className="shoes">
+            {this.renderdShoes()}
+          </div>
+        )}
         <div className="createShoes-container">
-          <CreateShoes createShoeUP={this.createShoeUP} shoes={this.props.shoes}/>
+          <CreateShoes createShoeUP={this.createShoeUP} shoes={this.props.shoes} />
         </div>
       </div>
 
