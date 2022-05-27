@@ -1,22 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './productPage.css';
+import Spinner from "../Spinner/Spinner";
 
 class ProductPage extends Component {
 
-
   findShoe = () => {
+    console.log(this.props)
     const { shoes, match } = this.props
     const shoeID = match.params.id;
     const shoe = shoes.find((shoe) => shoe.id === shoeID)
-    return shoe;
+    return shoe
   }
 
-  render() {
-
-    const shoe = this.findShoe();
-    return (
-      <div className="product-main">
+  renderdShoe = () => {
+    const { Spinning } = this.props;
+    if (Spinning) {
+      return <Spinner />
+    }
+    else {
+      const shoe = this.findShoe();
+      return (
         <div className="product-container">
           <div className="product-box">
             <div className="product-imgBox">
@@ -37,6 +41,14 @@ class ProductPage extends Component {
               <button>Edit</button></Link>
           </div>
         </div>
+      );
+    }
+  }
+
+  render() {
+    return (
+      <div className="product-main">
+        {this.renderdShoe()}
       </div>
     )
   }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { updateShoe } from "../Apis/requests";
 import '../ProductPage/productPage.css'
 
+import '../ProductPage/productPage.css'
 import './EditProductPage.css'
 
 

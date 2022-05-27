@@ -23,7 +23,7 @@ class App extends Component {
   componentDidMount = async () => {
     const shoes = await getShoes();
     this.setState({ shoes }, () => {
-      this.setState({ Spinning: false })
+      this.setState({ Spinning: false });
     });
   }
 
@@ -37,8 +37,8 @@ class App extends Component {
           <Header />
           <Route exact path="/" render={(props) => <HomePage {...props} Spinning={Spinning}
             setStateApp={this.setStateApp} shoes={shoes} />} />
-          <Route exact path="/product/shoe/:id" render={(props) => <ProductPage {...props} shoes={shoes} />} />
-          <Route exact path="/product/shoe/edit/:id" render={(props) => <EditProductPage {...props} shoes={shoes} />} />
+          <Route exact path="/product/shoe/:id" render={(props) => <ProductPage {...props} shoes={shoes} Spinning={Spinning} />} />
+          <Route exact path="/product/shoe/edit/:id" render={(props) => <EditProductPage {...props} shoes={shoes} Spinning={Spinning} />} />
         </div>
       </BrowserRouter>
     );

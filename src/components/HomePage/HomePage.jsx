@@ -10,9 +10,6 @@ import './HomePage.css'
 import './HomePageResponsive.css'
 
 
-
-
-
 class HomePage extends Component {
 
   //! Delete
@@ -31,7 +28,6 @@ class HomePage extends Component {
   createShoeUP = (newShoes) => {
     this.props.setStateApp({ shoes: newShoes });
   }
-
 
   renderdShoes = () => {
     const { shoes } = this.props
