@@ -6,7 +6,6 @@ import Spinner from "../Spinner/Spinner";
 class ProductPage extends Component {
 
   findShoe = () => {
-    console.log(this.props)
     const { shoes, match } = this.props
     const shoeID = match.params.id;
     const shoe = shoes.find((shoe) => shoe.id === shoeID)
