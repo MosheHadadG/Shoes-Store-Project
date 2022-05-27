@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import './productPage.css'
-
-import EditShoes from "../EditShoes/EditShoes";
-
+import './productPage.css';
 
 class ProductPage extends Component {
 
