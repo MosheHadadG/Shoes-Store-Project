@@ -49,6 +49,7 @@
 .product-buttons button {
   background-color: rgb(231, 24, 54);
   font-size: 1.3rem;
+  padding: 0 15px;
 }
 .product-buttons button:hover {
   background-color: rgb(147, 16, 36);;
