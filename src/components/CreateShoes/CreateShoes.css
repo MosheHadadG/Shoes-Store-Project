@@ -1,0 +1,33 @@
+.createShoes-title {
+  color: rgb(231, 24, 54);
+  display: flex;
+  justify-content: center;
+}
+
+.createShoes-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.createShoes-inputs input {
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.createShoes-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+ 
+}
+
+.createShoes-buttons button {
+  background-color: rgb(231, 24, 54);
+  font-size: 1.3rem;
+}
+
+.createShoes-buttons button:hover {
+  background-color: rgb(147, 16, 36);;
+}

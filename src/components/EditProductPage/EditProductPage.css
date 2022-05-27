@@ -1,0 +1,76 @@
+.createShoes-inputs input {
+  width: 330px;
+}
+
+.product-main {
+  width: 100%;
+  height: 100%;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  border: 1px solid #e2e2e2;
+  color: black;
+}
+
+.product-box {
+  width: 100%;
+  display: flex;
+  gap: 20%;
+
+}
+
+.product-imgBox {
+  width: 40%;
+  height: 100%;
+}
+
+.product-imgBox img{
+  width: 100%;
+  height: 100%;
+}
+
+.proudct-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.product-buttons {
+  margin-top: 100px;
+  display: flex;
+  gap: 20%;
+}
+
+.product-buttons button {
+  background-color: rgb(231, 24, 54);
+  font-size: 1.3rem;
+}
+.product-buttons button:hover {
+  background-color: rgb(147, 16, 36);;
+}
+
+
+.product-edit-inputs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.product-edit-inputs input{
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}

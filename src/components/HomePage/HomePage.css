@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+#cff{ font-family: 'Open Sans', sans-serif; }
+*{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+body {
+  height: 100%;
+  
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.main input {
+  width: 200px;
+  height: 40px;
+}
+
+.shoes {
+  display: grid;
+  width: 60%;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 100px;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+button {
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.button-more {
+  background-color: black;
+}
+.button-delete {
+  color: black;
+  
+}
+.button-delete:hover,
+.button-more:hover {
+  background-color: #555;
+  color: #f4f4f4;
+}
+
+.shoe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid transparent;
+}
+.shoe:hover {
+  border: 2px solid gray;
+}
+
+.shoe img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.shoe-name  {
+  font-size: 0.6rem;
+}
+
+
+.createShoes-container {
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  position: fixed;
+  right: 50px;
+
+
+}
