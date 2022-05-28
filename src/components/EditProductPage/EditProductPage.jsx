@@ -76,27 +76,24 @@ class EditProductPage extends Component {
                     ref={this.nameProductRef}
                     name="nameProductInput"
                     onChange={this.changeInput}
-                    defaultValue={name}>
-                  </input>
+                    defaultValue={name} />
                 </div>
                 <div className="product-edit-price">
                   <input
                     ref={this.priceProductRef}
                     name="priceProductInput"
                     onChange={this.changeInput}
-                    defaultValue={price}>
-                  </input>
+                    defaultValue={price} />
                 </div>
                 <div className="product-edit-description">
                   <textarea
                     ref={this.descProductRef}
-                    maxLength={300}
-                    rows="4"
+                    maxLength={320}
+                    rows="5"
                     cols="50"
                     name="descProductInput"
                     onChange={this.changeInput}
-                    defaultValue={description}>
-                  </textarea>
+                    defaultValue={description} />
                 </div>
               </div>
             </div>

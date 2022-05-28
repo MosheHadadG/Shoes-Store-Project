@@ -17,7 +17,7 @@ class CreateShoes extends Component {
   }
 
   //! Create 
-  
+
   createdShoe = async (newShoe) => {
     await createShoe(newShoe)
   }
@@ -58,9 +58,20 @@ class CreateShoes extends Component {
           <h1>Add New Shoes</h1>
         </div>
         <div className="createShoes-inputs">
-          <input value={urlProductInput} name="urlProductInput" onChange={this.changeInput} placeholder="Enter URL Image" />
-          <input value={nameProductInput} name="nameProductInput" onChange={this.changeInput} placeholder="Enter Name Shoes" />
-          <input value={priceProductInput} name="priceProductInput" onChange={this.changeInput} placeholder="Enter Price Shoes" />
+          <input
+            value={urlProductInput}
+            name="urlProductInput"
+            onChange={this.changeInput}
+            placeholder="Enter URL Image" />
+          <input value={nameProductInput}
+            name="nameProductInput"
+            onChange={this.changeInput}
+            placeholder="Enter Name Shoes" />
+          <input type="number"
+            value={priceProductInput}
+            name="priceProductInput"
+            onChange={this.changeInput}
+            placeholder="Enter Price Shoes" />
         </div>
         <div className="createShoes-buttons">
           <button onClick={this.handleCreateClick}>Add</button>
