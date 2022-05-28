@@ -1,0 +1,5 @@
+@media(max-width: 450px) {
+  .product-edit-inputs input{
+    width: 100%;
+  }
+}

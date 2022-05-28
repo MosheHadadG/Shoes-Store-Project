@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import './productPage.css';
+
 import Spinner from "../Spinner/Spinner";
+
+import './productPage.css';
+import './productPageResponsive.css'
+
 
 class ProductPage extends Component {
 

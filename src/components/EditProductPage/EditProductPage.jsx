@@ -5,6 +5,7 @@ import '../ProductPage/productPage.css'
 
 import '../ProductPage/productPage.css'
 import './EditProductPage.css'
+import './EditProductPageResponsive.css'
 
 
 class EditProductPage extends Component {
