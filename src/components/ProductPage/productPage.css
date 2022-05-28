@@ -46,6 +46,10 @@
   width: 100%;
 }
 
+.product-description p{
+  font-size: 1.1rem;
+}
+
 .product-buttons {
   margin-top: 100px;
   display: flex;
