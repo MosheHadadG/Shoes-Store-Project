@@ -9,7 +9,12 @@ import './EditProductPageResponsive.css'
 
 
 class EditProductPage extends Component {
-  state = { nameProductInput: '', priceProductInput: '', updatedShoe: {} }
+  state = {
+    nameProductInput: '',
+    priceProductInput: '',
+    descProductInput: '',
+    updatedShoe: {}
+  }
 
   changeInput = (event) => {
     const actionName = event.target.name;
@@ -26,11 +31,12 @@ class EditProductPage extends Component {
   }
 
   handleUpdateClick = () => {
-    const { nameProductInput, priceProductInput } = this.state
-    if (nameProductInput && priceProductInput) {
+    const { nameProductInput, priceProductInput, descProductInput } = this.state
+    if (nameProductInput && priceProductInput && descProductInput) {
       const shoe = this.props.location.props.shoe;
       shoe.name = nameProductInput;
-      shoe.price = priceProductInput
+      shoe.price = priceProductInput;
+      shoe.description = descProductInput;
       this.setState({ updatedShoe: shoe }, () => {
         this.updatedShoe(shoe.id, this.state.updatedShoe);
         this.props.history.push(`/product/shoe/${shoe.id}`);
@@ -40,7 +46,7 @@ class EditProductPage extends Component {
 
 
   render() {
-    const { name, avatar, price, id } = this.props.location.props.shoe
+    const { name, avatar, price, description, id } = this.props.location.props.shoe
     return (
       <div className="product-main">
         <div className="product-container">
@@ -51,10 +57,19 @@ class EditProductPage extends Component {
             <div className="product-info">
               <div className="product-edit-inputs">
                 <div className="product-edit-title">
-                  <input name="nameProductInput" onChange={this.changeInput} placeholder={name}></input>
+                  <input name="nameProductInput" onChange={this.changeInput} value={name}></input>
                 </div>
                 <div className="product-edit-price">
-                  <input name="priceProductInput" onChange={this.changeInput} placeholder={price}></input>
+                  <input name="priceProductInput" onChange={this.changeInput} value={price}></input>
+                </div>
+                <div className="product-edit-description">
+                  <textarea
+                    maxLength={300}
+                    rows="4"
+                    cols="50"
+                    name="descProductInput"
+                    onChange={this.changeInput} value={description}>
+                  </textarea>
                 </div>
               </div>
             </div>

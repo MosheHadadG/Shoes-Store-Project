@@ -39,6 +39,12 @@
   text-align: center;
   
 }
+.product-info {
+  width: 40%;
+}
+.product-description {
+  width: 100%;
+}
 
 .product-buttons {
   margin-top: 100px;

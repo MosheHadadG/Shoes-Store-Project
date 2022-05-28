@@ -18,3 +18,9 @@
   font-size: 1.3rem;
   border-radius: 10px;
 }
+
+.product-edit-description textarea {
+  width: 350px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}

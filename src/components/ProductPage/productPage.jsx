@@ -36,6 +36,11 @@ class ProductPage extends Component {
               <div className="product-price">
                 <h2>price: {shoe.price}$</h2>
               </div>
+              <div className="product-description">
+                <p>
+                  {shoe.description}
+                </p>
+              </div>
             </div>
           </div>
           <div className="product-buttons">
