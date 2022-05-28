@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { updateShoe } from "../Apis/requests";
-import '../ProductPage/productPage.css'
 
 import '../ProductPage/productPage.css'
 import './EditProductPage.css'
@@ -9,11 +8,30 @@ import './EditProductPageResponsive.css'
 
 
 class EditProductPage extends Component {
-  state = {
-    nameProductInput: '',
-    priceProductInput: '',
-    descProductInput: '',
-    updatedShoe: {}
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      nameProductInput: '',
+      priceProductInput: '',
+      descProductInput: '',
+      updatedShoe: {}
+    }
+
+    this.nameProductRef = React.createRef();
+    this.priceProductRef = React.createRef();
+    this.descProductRef = React.createRef();
+  }
+
+  componentDidMount = () => {
+    const nameProductVal = this.nameProductRef.current.value;
+    const priceProductVal = this.priceProductRef.current.value;
+    const descProductVal = this.descProductRef.current.value;
+    this.setState({
+      nameProductInput: nameProductVal,
+      priceProductInput: priceProductVal,
+      descProductInput: descProductVal
+    })
   }
 
   changeInput = (event) => {
@@ -22,9 +40,7 @@ class EditProductPage extends Component {
     this.setState({ [actionName]: value });
   }
 
-
   //! Update
-
   updatedShoe = async (id, updatedProduct) => {
     // update in dataBase
     await updateShoe(id, updatedProduct);
@@ -44,7 +60,6 @@ class EditProductPage extends Component {
     }
   }
 
-
   render() {
     const { name, avatar, price, description, id } = this.props.location.props.shoe
     return (
@@ -57,18 +72,30 @@ class EditProductPage extends Component {
             <div className="product-info">
               <div className="product-edit-inputs">
                 <div className="product-edit-title">
-                  <input name="nameProductInput" onChange={this.changeInput} value={name}></input>
+                  <input
+                    ref={this.nameProductRef}
+                    name="nameProductInput"
+                    onChange={this.changeInput}
+                    defaultValue={name}>
+                  </input>
                 </div>
                 <div className="product-edit-price">
-                  <input name="priceProductInput" onChange={this.changeInput} value={price}></input>
+                  <input
+                    ref={this.priceProductRef}
+                    name="priceProductInput"
+                    onChange={this.changeInput}
+                    defaultValue={price}>
+                  </input>
                 </div>
                 <div className="product-edit-description">
                   <textarea
+                    ref={this.descProductRef}
                     maxLength={300}
                     rows="4"
                     cols="50"
                     name="descProductInput"
-                    onChange={this.changeInput} value={description}>
+                    onChange={this.changeInput}
+                    defaultValue={description}>
                   </textarea>
                 </div>
               </div>
